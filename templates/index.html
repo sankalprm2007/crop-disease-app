@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Crop Disease Detection</title>
+</head>
+<body>
+
+<h1>🌱 AI Crop Disease Detection</h1>
+
+<form method="POST" enctype="multipart/form-data">
+    <input type="file" name="image" required>
+    <button type="submit">Detect Disease</button>
+</form>
+
+{% if result %}
+
+    <h2>Disease: {{ result }}</h2>
+
+    <h3>Solution:</h3>
+    <p>{{ solution }}</p>
+
+    <h3>Prevention:</h3>
+    <p>{{ prevention }}</p>
+
+{% endif %}
+
+</body>
+</html>
